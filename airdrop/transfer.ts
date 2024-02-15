@@ -39,6 +39,7 @@ const connection = new Connection("https://api.devnet.solana.com");
                 toPubkey: to,
                 lamports: balance,
             }));
+            
         transaction.recentBlockhash = (await
             connection.getLatestBlockhash('confirmed')).blockhash;
         transaction.feePayer = from.publicKey;
